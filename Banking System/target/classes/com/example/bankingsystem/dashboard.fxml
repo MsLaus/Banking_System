@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankingsystem.DashboardController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="500.0" prefWidth="800.0" spacing="40.0" styleClass="background" stylesheets="@styleSheet.css">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="500.0" prefWidth="136.0" spacing="20.0" style="-fx-opacity: 0.8;" styleClass="containers" stylesheets="@styleSheet.css">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                     <image>
+                        <Image url="@bank.png" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="shadow" text="Bank App" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #ff8300; -fx-background-radius: 10;" styleClass="shadow" stylesheets="@styleSheet.css" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="136.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@users.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#profile" style="-fx-background-color: #ff8300; -fx-background-radius: 10;" styleClass="shadow" stylesheets="@styleSheet.css" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="49.0" prefWidth="136.0" spacing="10.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                           <image>
+                              <Image url="@log-out-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #ff8300; -fx-background-radius: 10;" styleClass="shadow" stylesheets="@styleSheet.css" text="Log Out" textFill="WHITE">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="131.0" prefWidth="120.0" spacing="4.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                     <VBox.margin>
+                        <Insets left="8.0" right="8.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Report Suggestion?">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Use this to report" />
+                        <Label text="any error or " />
+                        <Label text="suggestions." />
+                        <Button mnemonicParsing="false" onAction="#report" style="-fx-background-color: #ff8300; -fx-background-radius: 10;" styleClass="shadow" stylesheets="@styleSheet.css" text="Report" textFill="WHITE">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></VBox>
+            <VBox prefHeight="440.0" prefWidth="581.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="582.0">
+                     <children>
+                        <Label fx:id="nameLabel" prefHeight="36.0" prefWidth="463.0" styleClass="shadow" textFill="WHITE">
+                           <font>
+                              <Font name="Nirmala UI Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dateLabel" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="111.0" styleClass="shadow" text="21.02.2023" textFill="WHITE">
+                           <font>
+                              <Font name="Nirmala UI" size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="10.0" style="-fx-opacity: 0.9;" styleClass="shadow" stylesheets="@styleSheet.css" text="My Account" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="cardBox" alignment="CENTER" prefHeight="155.0" prefWidth="581.0">
+                     <children>
+                        <HBox prefHeight="155.0" prefWidth="247.0" style="-fx-background-radius: 30;" stylesheets="@styleSheet.css">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="background" />
+                           </styleClass>
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="155.0" prefWidth="159.0" spacing="10.0">
+                                 <children>
+                                    <Label fx:id="balanceLabel" styleClass="shadow" text="1200" textFill="WHITE">
+                                       <font>
+                                          <Font name="Nirmala UI Bold" size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="numberAccountLabel" layoutX="40.0" layoutY="59.0" styleClass="shadow" text="*** *** *** 691" textFill="WHITE">
+                                       <font>
+                                          <Font name="Nirmala UI" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="30.0" layoutY="103.0" styleClass="shadow" text="Checking Account" textFill="WHITE">
+                                       <font>
+                                          <Font name="Nirmala UI" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="155.0" prefWidth="101.0" spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                       <image>
+                                          <Image url="@bank.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                       <image>
+                                          <Image url="@column.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="0.0" prefWidth="332.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="77.0" prefWidth="200.0" spacing="50.0">
+                                 <children>
+                                    <ChoiceBox fx:id="depositChooser" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #ff8300;" styleClass="shadow" stylesheets="@styleSheet.css" />
+                                    <Button mnemonicParsing="false" onAction="#deposit" style="-fx-background-color: #ff8300; -fx-background-radius: 20;" styleClass="shadow" text="Deposit" textFill="WHITE">
+                                       <font>
+                                          <Font name="Nirmala UI Bold" size="19.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="77.0" prefWidth="314.0" spacing="20.0">
+                                 <children>
+                                    <ChoiceBox fx:id="withdrawalChooser" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #ff8300;" styleClass="shadow" stylesheets="@styleSheet.css" />
+                                    <Button mnemonicParsing="false" onAction="#withdrawal" style="-fx-background-color: #ff8300; -fx-background-radius: 20;" styleClass="shadow" text="Withdrawal" textFill="WHITE">
+                                       <font>
+                                          <Font name="Nirmala UI Bold" size="19.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+                  <Label layoutX="10.0" layoutY="68.0" style="-fx-opacity: 0.9;" styleClass="shadow" stylesheets="@styleSheet.css" text="My Latest Transactions" textFill="WHITE">
+                     <font>
+                        <Font name="Nirmala UI" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" stylesheets="@styleSheet.css">
+                    <columns>
+                      <TableColumn fx:id="transaction" prefWidth="168.0" text="transaction" />
+                      <TableColumn fx:id="amount" prefWidth="130.0" text="amount" />
+                        <TableColumn fx:id="date" prefWidth="150.0" text="date" />
+                    </columns>
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </TableView>
+               </children></VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" right="30.0" top="30.0" />
+         </padding></HBox>
+    </children>
+</Pane>
