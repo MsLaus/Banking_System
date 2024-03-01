@@ -1,0 +1,17 @@
+.background{
+   -fx-background-color: linear-gradient( #e71a1a  ,  #ff8300 );
+}
+
+.shadow {
+  -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,2), 10, 0, 0, 0, 10);
+}
+
+.opacity {
+   -fx-opacity: 0.9;
+}
+
+.containers {
+
+     -fx-background-color: #ff8300 ;
+     -fx-background-radius: 30;
+}
