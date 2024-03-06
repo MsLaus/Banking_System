@@ -30,7 +30,7 @@ public class DashboardController extends SQLConnection implements Initializable 
     User user = new User();
 
     SQLConnection db = new SQLConnection();
-    Connection conn = db.connection("Bank System", "postgres", "lenovo24");
+    Connection conn = db.connection("Bank System", "postgres", "projectspassword");
 
     private Stage stage;
     private Scene scene;
