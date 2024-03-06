@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class SignInController extends  SQLConnection implements Initializable {
 
     SQLConnection db = new SQLConnection();
-    Connection conn = db.connection("Bank System", "postgres", "lenovo24");
+    Connection conn = db.connection("Bank System", "postgres", "projectspassword");
 
     @FXML
     private TextField accountNumberTextField;
