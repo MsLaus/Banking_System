@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 public class ProfileController implements Initializable {
 
     SQLConnection db = new SQLConnection();
-    Connection conn = db.connection("Bank System", "postgres", "lenovo24");
+    Connection conn = db.connection("Bank System", "postgres", "projectspassword");
 
     @FXML
     private Label balance;
